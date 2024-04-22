@@ -1,0 +1,37 @@
+<div class="container">
+  <div class ="row">
+      <div class ="col-md-6">
+          <table class="table" style="width: auto;">
+              <thead>
+                  <tr>
+                      <th>#</th>
+                      <th>Name</th>
+                      <th>Channel</th>
+                      <th>Seasons</th>
+                  </tr>
+              </thead>
+              <tbody style="background-color: #f2f2f2;">
+                <tr *ngFor="let s of series">
+                  <td>
+                    <dd>{{s.id}}</dd>
+                  </td>
+                  <td>
+                    <dd>{{s.name}}</dd>
+                  </td>
+                  <td>
+                    <dd>{{s.channel}}</dd>
+                  </td>
+                  <td>
+                    <dd>{{s.seasons}}</dd>
+                  </td>
+                </tr>
+              </tbody>
+          </table>
+          <div class="row" style="margin-left: 10px;">
+            <div>Seasons average:&nbsp;</div>
+            <div id="promedio-temporadas"></div>
+        </div>
+          
+      </div>       
+  </div>
+</div>

@@ -21,6 +21,20 @@ export class SerieComponent implements OnInit {
     })
   }
 
+  getPromedioTemporadas(series: Serie[]): number {
+
+    const totalSeries = series.length;
+    let totalTemporadas: number = 0;
+    let promedioTemporadas: number = 0;
+
+    series.forEach((serie) => totalTemporadas = totalTemporadas + serie.seasons);
+
+    if (totalSeries > 0) {
+        promedioTemporadas = totalTemporadas / totalSeries;
+    }
+    return promedioTemporadas;
+  }
+
   ngOnInit() {
     this.getSerieList();
   }
